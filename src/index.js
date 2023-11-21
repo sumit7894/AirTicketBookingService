@@ -8,7 +8,9 @@ const setupAndStartServer =()=>{
 
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({extended:true}));
+
     app.use('/api',apiRoutes); 
+    
     app.listen(PORT,()=>{
         console.log(`Server started at the port ${PORT}`)
         if(process.env.DB_SYNC){
